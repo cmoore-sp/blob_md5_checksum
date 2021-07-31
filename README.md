@@ -39,7 +39,6 @@ begin
 				r_bucket_object.object_etag		:= apex_web_service.g_headers(i).value;
 			when apex_web_service.g_headers(i).name = 'opc-content-md5' then				
 				r_bucket_object.remote_content_md5	:= apex_web_service.g_headers(i).value;
-				--r_bucket_object.initial_content_md5	:= apex_web_service.g_headers(i).value;
 			when apex_web_service.g_headers(i).name = 'version-id' then	
 				r_bucket_object.object_version_id 	:= apex_web_service.g_headers(i).value;
 			else
