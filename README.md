@@ -1,5 +1,5 @@
 # blob_md5_checksum
-Calculate the MD5 checksum for a Oracle BLOB. This calculation matches the Content MD5 Hash 
+Using Oracle PL/SQL, I created a function to alculate the MD5 checksum for a Oracle BLOB. This calculation matches the Content MD5 Hash 
 that one finds in the file properties at Oracle Cloud Infrastructure Storage (OCI Storage or OCI Bucket).
 
 For those need an MD5 checksum of a string (varchar2), please take a look at an APEX Utility
@@ -23,6 +23,7 @@ The sample code below captures the OCI calcuated MD5.
 We tend to capture the request headers and response headers in an API Staging table. When APIs go well, they do so very well.
 When they mess up, you need all of the tools and information you can find.
 
+```sql
 procedure response_headers (
 	r_bucket_object			in out api_bucket_object%rowtype,
 	r_staging						in out api_staging%rowtype
@@ -45,6 +46,7 @@ begin
 		end case;
 	end loop;	
 end response_headers;
-
-
+```
+### Keywords:
+Oracle PL/SQL, PLSQL MD5 checksum, PLSQL Blob MD5 checksum, PL/SQL Blob MD5 checksum calculation
 
