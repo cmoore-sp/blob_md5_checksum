@@ -25,8 +25,8 @@ When they mess up, you need all of the tools and information you can find.
 
 ```sql
 procedure response_headers (
-	r_bucket_object			in out api_bucket_object%rowtype,
-	r_staging						in out api_staging%rowtype
+	r_bucket_object		in out api_bucket_object%rowtype,
+	r_staging		in out api_staging%rowtype
 	)
 as
 begin
