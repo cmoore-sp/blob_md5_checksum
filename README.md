@@ -1,4 +1,4 @@
-# blob_md5_checksum
+# PLSQL BLOB MD5 Checksum
 Using Oracle PL/SQL, I created a function to alculate the MD5 checksum for a Oracle BLOB. This calculation matches the Content MD5 Hash 
 that one finds in the file properties at Oracle Cloud Infrastructure Storage (OCI Storage or OCI Bucket).
 
