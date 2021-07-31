@@ -2,8 +2,7 @@
 Using Oracle PL/SQL, I created a function to alculate the MD5 checksum for a Oracle BLOB. This calculation matches the Content MD5 Hash 
 that one finds in the file properties at Oracle Cloud Infrastructure Storage (OCI Storage or OCI Bucket).
 
-For those need an MD5 checksum of a string (varchar2), please take a look at an APEX Utility
-https://docs.oracle.com/en/database/oracle/application-express/20.2/aeapi/MD5_CHECKSUM-Function.html#GUID-025DF33F-CC93-4702-BB6E-453397BD7195
+For those need an MD5 checksum of a string (varchar2), please take a look at an [APEX Utility](https://docs.oracle.com/en/database/oracle/application-express/20.2/aeapi/MD5_CHECKSUM-Function.html#GUID-025DF33F-CC93-4702-BB6E-453397BD7195).
 
 I could not find an similar function for MD5 hash for BLOB.
 I wanted to calculate the MD5 hash for a blob prior to the upload to OCI so we can compare the
@@ -15,8 +14,10 @@ To capture the response headers, you'll need to adopt code that loops through
 APEX_WEB_SERVICE.G_HEADERS
 Not much has been provided on the Oracle documentation about this array. Here are two
 articles I found (JULY 2021)
-https://docs.oracle.com/en/database/oracle/application-express/20.2/aeapi/Retrieving-Cookies-and-HTTP-Headers.html#GUID-39ADA850-DDD1-4A71-834A-1F7BC4FB2269
-https://docs.oracle.com/en/database/oracle/application-express/20.2/aeapi/MAKE_REST_REQUEST-Procedure-Signature-1.html#GUID-8E618B80-FDE9-475C-BC0C-B7C985FCECFF
+
+[Article 1](https://docs.oracle.com/en/database/oracle/application-express/20.2/aeapi/Retrieving-Cookies-and-HTTP-Headers.html#GUID-39ADA850-DDD1-4A71-834A-1F7BC4FB2269)
+
+[Article 2](https://docs.oracle.com/en/database/oracle/application-express/20.2/aeapi/MAKE_REST_REQUEST-Procedure-Signature-1.html#GUID-8E618B80-FDE9-475C-BC0C-B7C985FCECFF)
 
 The sample code below captures the OCI calcuated MD5.
 
