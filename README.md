@@ -2,7 +2,7 @@
 Using Oracle PL/SQL, I created a function to calculate the MD5 checksum for a Oracle BLOB. This calculation matches the Content MD5 Hash 
 that one finds in the file properties at Oracle Cloud Infrastructure Storage (OCI Storage or OCI Bucket).
 
-For those need an MD5 checksum of a string (varchar2), please take a look at an [APEX Utility](https://docs.oracle.com/en/database/oracle/application-express/20.2/aeapi/MD5_CHECKSUM-Function.html#GUID-025DF33F-CC93-4702-BB6E-453397BD7195).
+For those need an MD5 checksum of a string (varchar2), please take a look at the [APEX Utility](https://docs.oracle.com/en/database/oracle/application-express/20.2/aeapi/MD5_CHECKSUM-Function.html#GUID-025DF33F-CC93-4702-BB6E-453397BD7195) MD5 Checksum for varchar2
 
 I could not find an similar function for MD5 hash for BLOB.
 I wanted to calculate the MD5 hash for a blob prior to the upload to OCI so we can compare the
