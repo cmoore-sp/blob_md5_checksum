@@ -1,0 +1,31 @@
+function blob_md5_checksum (
+	P_BLOB			in blob
+	) return varchar2
+as
+	------------------------------------------------------------------------------
+	-- Function: 	blob_md5_checksum written in Oracle PLSQL
+	-- Author:		Christina Moore
+	-- Date:			30 JUL 2021
+	-- Version:		1
+	--
+	-- MD5 hash checksum on the blob provided
+	-- This hash matches the content hash on OCI Objects
+	--
+	--
+	/*
+	initial_content_md5			:= blob_md5_checksum(f.blob_content);		
+	*/
+	------------------------------------------------------------------------------
+	l_return									varchar2(2000);
+	l_base64									varchar2(2000);
+	l_hash										raw(2000);
+begin
+	l_hash := dbms_crypto.hash(
+							src => P_BLOB,
+							typ => dbms_crypto.hash_md5
+						);
+								
+	l_base64 := utl_encode.base64_encode(l_hash);
+	l_return := utl_raw.cast_to_varchar2(l_base64);
+	return l_return;
+end blob_md5_checksum;
