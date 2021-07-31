@@ -10,6 +10,10 @@ initial calculation with the value returned from OCI in the response headers. If
 values match, then we can be assured that the BLOB contents at both ends of the transfer
 match.
 
+Here is a function to calculate an [MD5 Hash Checksum on a BLOB](https://github.com/cmoore-sp/blob_md5_checksum/blob/main/blob_md5_checksum)
+
+OCI requires Base64 encoding with the value returned as a string (varchar2).
+
 To capture the response headers, you'll need to adopt code that loops through
 APEX_WEB_SERVICE.G_HEADERS
 Not much has been provided on the Oracle documentation about this array. Here are two
@@ -19,7 +23,7 @@ articles I found (JULY 2021)
 
 [Article 2](https://docs.oracle.com/en/database/oracle/application-express/20.2/aeapi/MAKE_REST_REQUEST-Procedure-Signature-1.html#GUID-8E618B80-FDE9-475C-BC0C-B7C985FCECFF)
 
-The sample code below captures the OCI calcuated MD5.
+The sample code below captures the OCI calculated MD5.
 
 We tend to capture the request headers and response headers in an API Staging table. When APIs go well, they do so very well.
 When they mess up, you need all of the tools and information you can find.
