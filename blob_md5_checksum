@@ -21,9 +21,9 @@ as
 	l_hash										raw(2000);
 begin
 	l_hash := dbms_crypto.hash(
-							src => P_BLOB,
-							typ => dbms_crypto.hash_md5
-						);
+		src => P_BLOB,
+		typ => dbms_crypto.hash_md5
+		);
 								
 	l_base64 := utl_encode.base64_encode(l_hash);
 	l_return := utl_raw.cast_to_varchar2(l_base64);
