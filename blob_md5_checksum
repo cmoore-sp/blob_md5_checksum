@@ -4,9 +4,9 @@ function blob_md5_checksum (
 as
 	------------------------------------------------------------------------------
 	-- Function: 	blob_md5_checksum written in Oracle PLSQL
-	-- Author:		Christina Moore
-	-- Date:			30 JUL 2021
-	-- Version:		1
+	-- Author:	Christina Moore
+	-- Date:	30 JUL 2021
+	-- Version:	1
 	--
 	-- MD5 hash checksum on the blob provided
 	-- This hash matches the content hash on OCI Objects
